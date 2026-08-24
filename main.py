@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from pydantic import BaseModel
 from search import hybrid_search, rerank
@@ -8,6 +7,7 @@ import os
 from dotenv import load_dotenv
 import time
 from logger import log_query
+from agent import run_agent 
 
 load_dotenv()
 app = FastAPI()
@@ -19,6 +19,9 @@ class QueryRequest(BaseModel):
 @app.get("/")
 def read_root():
     return {"status": "SupportIQ API is running"}
+
+
+RELEVANCE_THRESHOLD = 0.0  # we'll tune this after testing
 
 
 @app.post("/query")
@@ -47,16 +50,26 @@ Answer:"""
     )
     t2 = time.time()
 
-    log_query(
-        question=request.question,
-        sources=sources,
-        answer=response.text,
-        retrieval_ms=round((t1 - t0) * 1000, 1),
-        generation_ms=round((t2 - t1) * 1000, 1)
-    )
+    log_query(request.question, sources, response.text, round((t1-t0)*1000, 1), round((t2-t1)*1000, 1))
+
+    return {"question": request.question, "answer": response.text, "sources": sources}
+    
+
+  
+class ChatRequest(BaseModel):
+    message: str
+    thread_id: str = "default"
+
+@app.post("/chat")
+def chat(request: ChatRequest):
+    t0 = time.time()
+    result = run_agent(request.message, thread_id=request.thread_id)
+    elapsed = round((time.time() - t0) * 1000, 1)
+
+    log_query(request.message, ["agent"], str(result), elapsed, 0)
 
     return {
-        "question": request.question,
-        "answer": response.text,
-        "sources": sources
+        "message": request.message,
+        "response": result,
+        "thread_id": request.thread_id
     }
