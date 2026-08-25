@@ -1,0 +1,12 @@
+[
+  {"question": "Can I return shoes after 10 days?", "expected_source": "return_refund_policy.txt"},
+  {"question": "How long does shipping take to Lahore?", "expected_source": "shipping_policy.txt"},
+  {"question": "Is shipping free on small orders?", "expected_source": "shipping_policy.txt"},
+  {"question": "Does electronics warranty cover water damage?", "expected_source": "warranty_policy.txt"},
+  {"question": "How long is the warranty on appliances?", "expected_source": "warranty_policy.txt"},
+  {"question": "Can I cancel my order after it's dispatched?", "expected_source": "faq_general.txt"},
+  {"question": "What payment methods do you accept?", "expected_source": "faq_general.txt"},
+  {"question": "How do I track my order?", "expected_source": "faq_general.txt"},
+  {"question": "Are innerwear items returnable?", "expected_source": "return_refund_policy.txt"},
+  {"question": "Do you offer gift wrapping?", "expected_source": "NONE"}
+]

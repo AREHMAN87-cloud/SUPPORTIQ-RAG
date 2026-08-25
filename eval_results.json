@@ -1,0 +1,135 @@
+[
+  {
+    "question": "Can I return shoes after 10 days?",
+    "expected_source": "return_refund_policy.txt",
+    "retrieved_sources": [
+      "qna_92",
+      "qna_64",
+      "qna_95",
+      "return_refund_policy.txt"
+    ],
+    "retrieval_hit": true,
+    "answer": "Yes, you may return products within 14 days of delivery, provided the item is unused, undamaged, and in its original packaging with all tags attached.",
+    "generation_pass": true
+  },
+  {
+    "question": "How long does shipping take to Lahore?",
+    "expected_source": "shipping_policy.txt",
+    "retrieved_sources": [
+      "qna_194",
+      "shipping_policy.txt",
+      "qna_21",
+      "qna_205"
+    ],
+    "retrieval_hit": true,
+    "answer": "Standard delivery within Lahore takes 2-4 business days.",
+    "generation_pass": true
+  },
+  {
+    "question": "Is shipping free on small orders?",
+    "expected_source": "shipping_policy.txt",
+    "retrieved_sources": [
+      "shipping_policy.txt",
+      "qna_44",
+      "faq_general.txt"
+    ],
+    "retrieval_hit": true,
+    "answer": "Shipping is free only on orders above PKR 3,000. Orders below this threshold have a flat shipping fee of PKR 150.",
+    "generation_pass": true
+  },
+  {
+    "question": "Does electronics warranty cover water damage?",
+    "expected_source": "warranty_policy.txt",
+    "retrieved_sources": [
+      "qna_70",
+      "qna_75",
+      "qna_109",
+      "warranty_policy.txt"
+    ],
+    "retrieval_hit": true,
+    "answer": "No, the warranty does not cover water damage.",
+    "generation_pass": true
+  },
+  {
+    "question": "How long is the warranty on appliances?",
+    "expected_source": "warranty_policy.txt",
+    "retrieved_sources": [
+      "qna_209",
+      "qna_64",
+      "qna_195",
+      "warranty_policy.txt"
+    ],
+    "retrieval_hit": true,
+    "answer": "The manufacturer's standard warranty for appliances typically ranges from 6 months to 1 year, depending on the brand and product category.",
+    "generation_pass": true
+  },
+  {
+    "question": "Can I cancel my order after it's dispatched?",
+    "expected_source": "faq_general.txt",
+    "retrieved_sources": [
+      "qna_39",
+      "qna_41",
+      "qna_54",
+      "qna_30",
+      "qna_46"
+    ],
+    "retrieval_hit": false,
+    "answer": "Once an order has been handed over to the courier, cancellation may no longer be possible. However, please share your order number, and we'll check the available options for you.",
+    "generation_pass": true
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "expected_source": "faq_general.txt",
+    "retrieved_sources": [
+      "qna_171",
+      "qna_152",
+      "qna_175",
+      "qna_161",
+      "qna_156"
+    ],
+    "retrieval_hit": false,
+    "answer": "I don't have that information.",
+    "generation_pass": false
+  },
+  {
+    "question": "How do I track my order?",
+    "expected_source": "faq_general.txt",
+    "retrieved_sources": [
+      "qna_16",
+      "qna_5",
+      "qna_0",
+      "qna_2",
+      "qna_44"
+    ],
+    "retrieval_hit": false,
+    "answer": "To track your order, please share your order number. Once provided, I can check the latest tracking information, delivery progress, and whether your shipment has been processed.",
+    "generation_pass": true
+  },
+  {
+    "question": "Are innerwear items returnable?",
+    "expected_source": "return_refund_policy.txt",
+    "retrieved_sources": [
+      "qna_92",
+      "qna_78",
+      "qna_68",
+      "return_refund_policy.txt"
+    ],
+    "retrieval_hit": true,
+    "answer": "No, innerwear is excluded from returns.",
+    "generation_pass": true
+  },
+  {
+    "question": "Do you offer gift wrapping?",
+    "expected_source": "NONE",
+    "retrieved_sources": [
+      "qna_87",
+      "qna_114",
+      "qna_68",
+      "qna_198",
+      "qna_107"
+    ],
+    "retrieval_hit": false,
+    "answer": "I don't have that information.",
+    "generation_pass": true
+  }
+]
